@@ -1,0 +1,33 @@
+# video_agent 的沙箱镜像。
+#
+# 起点是 LangAlpha 的 Dockerfile.sandbox，但只留跑代码需要的：
+# 它那份还装了 node / playwright / libreoffice / uv，是给它文档+图表栈用的。
+#
+# 构建：docker build -f Dockerfile.sandbox -t video-agent-sandbox:latest .
+
+FROM ubuntu:24.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        python3 python3-pip python3-venv \
+        git curl jq ripgrep ca-certificates \
+    && ln -sf /usr/bin/python3 /usr/bin/python \
+    && ln -sf /usr/bin/pip3 /usr/bin/pip \
+    # 没有这行，容器里 pip install 会被 PEP 668 挡掉
+    && rm -f /usr/lib/python*/EXTERNALLY-MANAGED \
+    && rm -rf /var/lib/apt/lists/*
+
+# 中文字体。matplotlib 默认的 DejaVu Sans 没有 CJK 字形，带中文的标题和轴标签
+# 会渲染成方框 —— 我们处理的就是中文文本数据，这条不是可选项。
+# 想要更好的字形可以换 fonts-noto-cjk，代价是镜像大一百多 MB。
+# 单独一层，是为了上面那层能继续吃缓存，改这里不用重装 python/git。
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends fonts-wqy-zenhei \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /home/workspace
+
+# 容器起来后停在这，靠 exec 驱动
+CMD ["sleep", "infinity"]

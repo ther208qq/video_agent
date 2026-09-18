@@ -1,0 +1,22 @@
+# 虚拟环境
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# 密钥 —— 绝对不能提交
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# 沙箱挂载的工作目录：容器里的运行时产物，不是源码
+workspace/*
+
+# IDE
+.idea/
+.vscode/

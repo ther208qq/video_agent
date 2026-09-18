@@ -1,0 +1,5 @@
+langchain>=1.4.0
+langchain-deepseek
+langgraph>=1.2.2,<2
+python-dotenv
+docker
