@@ -16,6 +16,11 @@ if 分支里，执行到那一行才加载。于是「谁被加载」由运行�
 
 注意：这一步只看不动 —— sandbox/ 包一行没改。它证明的是「机制可行」，
 不是「已经修好」。
+
+修复已经落地（docker.py 移进了 sandbox/providers/，__init__.py 只导出契约，
+工厂把 provider 的 import 关在函数体分支里）。所以本文件记录的是**修复前**
+的状态，直接跑它，第 1 段的探针现在会打印 False —— 那正是修好的证据。
+守着别漏回去的是 steps/v10_encapsulation.py。
 """
 
 import asyncio
@@ -190,17 +195,36 @@ async def call_tool(tool: Any, /, **args: Any) -> tuple[Any, Any]:
 # ---------------------------------------------------------------------------
 
 def section_leak() -> None:
-    print("=== 1. 现状：业务 Tool 拖进 Docker SDK ===")
+    print("=== 1. 修复前的样子：业务 Tool 拖进 Docker SDK ===")
     print("  在全新解释器里只 import 业务工具，然后问 docker 在不在:")
     print("   ", probe("import tools.bash, sys; print('docker in sys.modules =', 'docker' in sys.modules)"))
 
     print()
-    print("  肇事的是这几行:")
-    for lineno, line in enumerate(
-        (PROJECT_ROOT / "sandbox" / "__init__.py").read_text(encoding="utf-8").splitlines(),
-        start=1,
-    ):
-        if "docker" in line:
+    print("  当初肇事的是这几行:")
+    offenders = [
+        (lineno, line)
+        for lineno, line in enumerate(
+            (PROJECT_ROOT / "sandbox" / "__init__.py").read_text(encoding="utf-8").splitlines(),
+            start=1,
+        )
+        # 修复前这里有一行 from .docker import ...；修完之后本文件里不再有
+        # 任何 docker 字样，循环自然落空。归到 providers/ 的那份在下面看。
+        if "docker" in line
+    ]
+    if not offenders:
+        print("    （sandbox/__init__.py 里已经没有 docker 字样了 —— 已经修好）")
+        provider_init = PROJECT_ROOT / "sandbox" / "providers" / "__init__.py"
+        for lineno, line in enumerate(
+            provider_init.read_text(encoding="utf-8").splitlines(), start=1
+        ):
+            # 关在函数体分支里的那行 import，现在长这样。用 startswith 而不是
+            # in —— 模块的文档字符串里也举了这个写法当反例，按子串搜会把它
+            # 一起捞出来。
+            if line.strip().startswith("from .docker import"):
+                print(f"    sandbox/providers/__init__.py:{lineno}  {line.strip()}")
+        print("    这行 import 在 create_provider() 的 if 分支里，只有真选中 docker 才执行。")
+    else:
+        for lineno, line in offenders:
             print(f"    sandbox/__init__.py:{lineno}  {line.strip()}")
     print("  业务工具只想拿一个抽象接口，模块级 import 却把整个 Docker SDK 顺了进来。")
 
@@ -228,7 +252,7 @@ def section_abstraction() -> None:
         print("   ", line)
 
     print()
-    print("  结论：泄漏不在抽象层，就在 sandbox/__init__.py 那一行急切 import。")
+    print("  结论：泄漏不在抽象层，就在 sandbox/__init__.py 那一行急切 import（现已移除）。")
 
 
 # ---------------------------------------------------------------------------
@@ -327,13 +351,14 @@ async def main() -> None:
 
     print()
     print("=== 小结 ===")
-    print("  1. 现状确实漏：业务工具 → sandbox/__init__.py:3 → docker")
+    print("  1. 修复前确实漏：业务工具 → sandbox/__init__.py:3 → docker")
     print("  2. 抽象层是干净的，问题只在那行急切 import")
     print("  3. 工具本身不依赖 Docker，只依赖 SandboxRuntime 契约")
     print("  4. 把 provider 选择收进工厂函数的分支体内，就能切断那条线")
     print()
-    print("  本步骤只做验证，没有改 sandbox/ —— 要真修，需要把 docker.py 移进")
-    print("  sandbox/providers/ 并让 __init__.py 停止急切导出它。")
+    print("  本步骤只做验证，没有改 sandbox/。要真修，得把 docker.py 移进")
+    print("  sandbox/providers/ 并让 __init__.py 停止急切导出它 —— 已经照做了，")
+    print("  守行为的是 steps/v10_encapsulation.py。")
 
 
 if __name__ == "__main__":

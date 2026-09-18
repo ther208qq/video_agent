@@ -9,7 +9,7 @@ import docker
 # 直接跑 steps/ 下的脚本时，sys.path[0] 是 steps/ 而不是项目根
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from sandbox.chart_capture import build_code_wrapper, extract_artifacts
+from sandbox.providers._chart_capture import build_code_wrapper, extract_artifacts
 
 WORK_DIR = "/home/workspace"
 

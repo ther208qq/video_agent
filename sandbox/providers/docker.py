@@ -1,3 +1,8 @@
+"""Docker 沙箱 provider：把沙箱跑成本机的容器。
+
+本文件是整个仓库里唯一允许 import docker SDK 的地方（`_chart_capture.py`
+是它的私有辅助，也不碰 SDK）。业务工具只认 ``..runtime`` 的契约，够不着这里。
+"""
 
 from __future__ import annotations
 
@@ -13,8 +18,8 @@ from typing import Any
 
 import docker as docker_sdk
 
-from .chart_capture import build_code_wrapper, extract_artifacts
-from .runtime import (
+from ._chart_capture import build_code_wrapper, extract_artifacts
+from ..runtime import (
     CodeRunResult,
     ExecResult,
     RuntimeState,

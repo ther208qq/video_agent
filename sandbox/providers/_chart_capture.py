@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from .runtime import Artifact
+from ..runtime import Artifact
 
 
 def build_code_wrapper(code: str) -> str:
