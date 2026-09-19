@@ -33,6 +33,13 @@ SKILL_REGISTRY: dict[str, SkillDefinition] = {
         tool_names=("Bash", "ExecuteCode"),
         doc="sandbox-exec.md",
     ),
+    # 不挂工具，纯粹是一套做法。给子代理预装用（见 SubAgent.skills），
+    # 主 agent 也能加载，但不会因此多出任何工具。
+    "data-analysis": SkillDefinition(
+        name="data-analysis",
+        description="分析一组数据该怎么做：先看形状、处理缺失、报告口径。",
+        doc="data-analysis.md",
+    ),
 }
 
 

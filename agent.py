@@ -1,16 +1,34 @@
 
+from collections.abc import Sequence
+
 from langchain.agents import create_agent
 from langchain.agents.middleware import SummarizationMiddleware
 
 from middleware import (
     LargeResultEvictionMiddleware,
     SkillsMiddleware,
+    SubAgent,
+    SubAgentMiddleware,
 )
 from sandbox import SandboxRuntime
 from tools import get_tools
 from tools.bash import create_execute_bash_tool
 from tools.code_execution import create_execute_code_tool
 from tools.file_ops import create_read_tool
+
+DATA_ANALYSIS = SubAgent(
+    name="data-analysis",
+    description=(
+        "只做数据分析：把数据读进来、清洗、统计、总结，必要时出图。"
+        "不要派需要写代码改仓库或查网页的活给它。"
+    ),
+    system_prompt=(
+        "You are a data analysis subagent. You receive a self-contained brief "
+        "and return a finished analysis. Work in the sandbox; put every "
+        "artifact under work/<task>/ and name the paths in your report."
+    ),
+    skills=("data-analysis",),
+)
 
 
 def create_video_agent(
@@ -21,6 +39,7 @@ def create_video_agent(
     checkpointer=None,
     store=None,
     sandbox: SandboxRuntime | None = None,
+    subagents: Sequence[SubAgent] = (),
 ):
 
     resolved = get_tools() if tools is None else tools
@@ -36,6 +55,20 @@ def create_video_agent(
         ]
 
         resolved_middleware.insert(0, LargeResultEvictionMiddleware(sandbox))
+
+        subagent_middleware = [LargeResultEvictionMiddleware(sandbox)]
+    else:
+        subagent_middleware = None
+
+
+    resolved_middleware.append(
+        SubAgentMiddleware(
+            model=model,
+            tools=resolved,
+            middleware=subagent_middleware,
+            subagents=subagents,
+        )
+    )
 
     resolved_middleware.append(
         SummarizationMiddleware(
@@ -80,6 +113,7 @@ async def main() -> None:
                 model,
                 checkpointer=checkpointer,
                 sandbox=runtime,
+                subagents=[DATA_ANALYSIS],
             )
             result = await agent.ainvoke(
                 {"messages": [{"role": "user", "content": prompt}]},
