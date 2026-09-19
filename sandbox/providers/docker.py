@@ -1,15 +1,10 @@
-"""Docker 沙箱 provider：把沙箱跑成本机的容器。
-
-本文件是整个仓库里唯一允许 import docker SDK 的地方（`_chart_capture.py`
-是它的私有辅助，也不碰 SDK）。业务工具只认 ``..runtime`` 的契约，够不着这里。
-"""
-
 from __future__ import annotations
 
 import asyncio
 import base64
 import io
 import json
+import posixpath
 import shlex
 import tarfile
 import uuid
@@ -45,16 +40,12 @@ _STATUS_MAP = {
 
 
 def _b64_py(snippet: str) -> str:
-    """把一段 Python 源码 base64 后交给容器里的 python3 执行。
 
-    直接拼字符串会在路径含引号/空格时炸掉，base64 绕开整个转义问题。
-    """
     payload = base64.b64encode(snippet.encode("utf-8")).decode("ascii")
     return f"python3 -c \"import base64;exec(base64.b64decode('{payload}'))\""
 
 
 class DockerRuntime(SandboxRuntime):
-    """一个 Docker 容器，靠 exec 驱动。"""
 
     def __init__(
         self,
@@ -93,23 +84,14 @@ class DockerRuntime(SandboxRuntime):
 
     async def exec(self, command: str, timeout: int = 60) -> ExecResult:
         def _run() -> ExecResult:
-            # demux=False：stderr 并进 stdout，stderr 恒为空串。上游 docker.py:190
-            # 就是这个行为，Bash 工具的错误分支按它写的，保持一致。
-            #
-            # 超时交给容器里的 timeout(1) 管：它把命令 fork 进自己的进程组，
-            # 到点对整组发 SIGTERM，bash -c 拉起来的子进程跟着一起走；
-            # -k 5 是兜底，5 秒后还没退就 SIGKILL。只在容器外面 wait_for
-            # 是拦不住容器里的进程的 —— 那正是后台残留的来源。
-            # argv 直接传，command 不需要再做 shell 转义。
+
             result = self._container.exec_run(
                 cmd=["timeout", "-k", "5", str(timeout), "bash", "-c", command],
                 workdir=self._working_dir,
                 demux=False,
             )
             exit_code = result.exit_code if result.exit_code is not None else -1
-            # timeout(1) 用 124 报「是我杀掉的」。收敛成调用方认识的形状：
-            # stderr="timeout" 是既有约定，Bash 工具靠它把超时和普通失败分开。
-            # 代价是命令自己恰好返回 124 时会被当成超时，这个歧义暂时留着。
+
             if exit_code == 124:
                 return ExecResult(stdout="", stderr="timeout", exit_code=-1)
             output = result.output or b""
@@ -120,8 +102,7 @@ class DockerRuntime(SandboxRuntime):
             )
 
         try:
-            # 外层只是兜底：timeout 自己卡死时（比如挂在不可中断的睡眠里）
-            # 还得有人收尾，所以留出 -k 5 的余量。
+
             return await asyncio.wait_for(
                 asyncio.to_thread(_run), timeout=timeout + 10
             )
@@ -171,16 +152,18 @@ class DockerRuntime(SandboxRuntime):
     # -- File I/O --
 
     async def upload_file(self, content: bytes, dest_path: str) -> None:
-        path = Path(dest_path)
+        # 容器里是 POSIX 路径，不能用 Path——Windows 上会把 / 掰成 \
+        dest = self.resolve_path(dest_path)
+        parent, name = posixpath.split(dest)
+        # put_archive 不会自己建父目录，目录缺一层就整个 404
+        await self.exec(f"mkdir -p {shlex.quote(parent)}")
         buf = io.BytesIO()
         with tarfile.open(fileobj=buf, mode="w") as tar:
-            info = tarfile.TarInfo(name=path.name)
+            info = tarfile.TarInfo(name=name)
             info.size = len(content)
             tar.addfile(info, io.BytesIO(content))
         buf.seek(0)
-        await asyncio.to_thread(
-            self._container.put_archive, str(path.parent), buf.getvalue()
-        )
+        await asyncio.to_thread(self._container.put_archive, parent, buf.getvalue())
 
     async def upload_files(self, files: list[tuple[bytes | str, str]]) -> None:
         for source, dest in files:
@@ -188,6 +171,8 @@ class DockerRuntime(SandboxRuntime):
             await self.upload_file(content, dest)
 
     async def download_file(self, path: str) -> bytes:
+        path = self.resolve_path(path)
+
         def _get() -> bytes:
             stream, _stat = self._container.get_archive(path)
             raw = b"".join(stream)
@@ -200,7 +185,7 @@ class DockerRuntime(SandboxRuntime):
 
         try:
             return await asyncio.to_thread(_get)
-        except docker_sdk.errors.NotFoundError as exc:
+        except docker_sdk.errors.NotFound as exc:
             raise FileNotFoundError(f"No such file in sandbox: {path}") from exc
 
     async def list_files(self, directory: str) -> list[dict[str, Any]]:
@@ -309,7 +294,7 @@ class DockerProvider(SandboxProvider):
         def _get() -> Any:
             try:
                 return client.containers.get(f"{_NAME_PREFIX}{sandbox_id}")
-            except docker_sdk.errors.NotFoundError as exc:
+            except docker_sdk.errors.NotFound as exc:
                 raise FileNotFoundError(f"No such sandbox: {sandbox_id}") from exc
 
         container = await asyncio.to_thread(_get)
@@ -328,6 +313,6 @@ class DockerProvider(SandboxProvider):
         return isinstance(exc, (ConnectionError, TimeoutError))
 
     def classify_error(self, exc: Exception) -> SandboxFailureKind:
-        if isinstance(exc, docker_sdk.errors.NotFoundError):
+        if isinstance(exc, docker_sdk.errors.NotFound):
             return SandboxFailureKind.SANDBOX_GONE
         return super().classify_error(exc)

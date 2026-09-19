@@ -1,17 +1,3 @@
-"""沙箱 provider 工厂。
-
-这个模块唯一的职责是「选谁来干活」。要点在于具体 provider 的 import 写在
-``create_provider`` 函数体的 if 分支里，而不是模块级：
-
-    import sandbox.providers          → 一个 SDK 都不加载
-    create_provider("nope")           → 抛 ValueError，docker 依然没进来
-    create_provider("docker")         → 到这一行 docker 才进 sys.modules
-
-换成模块级 ``from .docker import DockerProvider``，上面三行的结果就会变成
-「都一样，一 import 就加载」。那样 provider 的选择权就不再由运行时决定，
-而是被 import 图静态钉死了 —— v9 里量化的就是这个差别。
-"""
-
 from __future__ import annotations
 
 import os

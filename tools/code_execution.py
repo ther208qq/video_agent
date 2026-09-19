@@ -18,6 +18,9 @@ logger = logging.getLogger(__name__)
 def create_execute_code_tool(sandbox: SandboxRuntime) -> BaseTool:
     """创建绑定到 ``sandbox`` 的 ExecuteCode 工具。"""
 
+    # 事后翻日志用：少了这两个字段，分不出代码落到了哪个 runtime
+    where = {"sandbox_id": sandbox.id, "runtime": type(sandbox).__name__}
+
     @tool("ExecuteCode", response_format="content_and_artifact")
     async def execute_code(
         code: str,
@@ -37,7 +40,10 @@ def create_execute_code_tool(sandbox: SandboxRuntime) -> BaseTool:
             SUCCESS with stdout, or ERROR with stderr.
         """
         try:
-            logger.info("Executing code in sandbox", extra={"code_length": len(code)})
+            logger.info(
+                "Executing code in sandbox",
+                extra={**where, "code_length": len(code)},
+            )
 
             result = await sandbox.code_run(code)
 
@@ -58,12 +64,13 @@ def create_execute_code_tool(sandbox: SandboxRuntime) -> BaseTool:
             # Python 的 traceback 有时走 stdout，两个都看
             error_output = result.stderr or result.stdout
             logger.warning(
-                "Code execution failed", extra={"exit_code": result.exit_code}
+                "Code execution failed",
+                extra={**where, "exit_code": result.exit_code},
             )
             return f"ERROR\n{error_output}", artifact
 
         except Exception as e:
-            logger.exception("Code execution exception")
+            logger.exception("Code execution exception", extra=where)
             return f"ERROR: {e!s}", {}
 
     return execute_code

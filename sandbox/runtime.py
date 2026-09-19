@@ -96,6 +96,14 @@ class SandboxRuntime(ABC):
         """Default working directory inside the sandbox."""
         ...
 
+    def resolve_path(self, path: str) -> str:
+        """相对路径按 working_dir 展开，已经是绝对路径的原样返回。
+
+        跟 Bash 里 cd 到 working_dir 对齐。文件读写底层已经自己调过，这里主要是
+        给需要拿到**路径字符串**的调用方用（写进日志、回给模型的提示、判存在）。
+        """
+        return path if path.startswith("/") else f"{self.working_dir}/{path}"
+
     # -- Lifecycle --
 
     @abstractmethod
@@ -139,7 +147,11 @@ class SandboxRuntime(ABC):
 
     @abstractmethod
     async def upload_file(self, content: bytes, dest_path: str) -> None:
-        """Upload a single file to the sandbox."""
+        """Upload a single file to the sandbox.
+
+        Relative paths resolve against ``working_dir``; missing parent
+        directories are created.
+        """
         ...
 
     @abstractmethod
@@ -153,7 +165,10 @@ class SandboxRuntime(ABC):
 
     @abstractmethod
     async def download_file(self, path: str) -> bytes:
-        """Download a file from the sandbox."""
+        """Download a file from the sandbox.
+
+        Relative paths resolve against ``working_dir``.
+        """
         ...
 
     @abstractmethod

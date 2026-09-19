@@ -1,5 +1,6 @@
 langchain>=1.4.0
 langchain-deepseek
 langgraph>=1.2.2,<2
+langgraph-checkpoint-sqlite
 python-dotenv
 docker

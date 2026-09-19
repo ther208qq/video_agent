@@ -17,6 +17,9 @@ __pycache__/
 # 沙箱挂载的工作目录：容器里的运行时产物，不是源码
 workspace/*
 
+# 对话落盘：运行数据，不进版本库
+.langgraph/
+
 # IDE
 .idea/
 .vscode/

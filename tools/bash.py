@@ -1,12 +1,3 @@
-"""在沙箱里执行 bash 命令。
-
-搬自 LangAlpha 的 src/ptc_agent/agent/tools/bash.py，两处改动：
-- 删掉 store 支撑的 memory/memo 路径拦截 —— video_agent 没有这两层，
-  留着会让模型以为路径存在。
-- 删掉 working_dir 和 run_in_background 两个参数 —— 我们的 SandboxRuntime
-  只有一个固定工作目录、也没有后台会话，留着就是骗模型。
-"""
-
 import logging
 from typing import Any
 
@@ -19,6 +10,9 @@ logger = logging.getLogger(__name__)
 
 def create_execute_bash_tool(sandbox: SandboxRuntime) -> BaseTool:
     """创建绑定到 ``sandbox`` 的 Bash 工具。"""
+
+    # 事后翻日志用：少了这两个字段，分不出命令落到了哪个 runtime
+    where = {"sandbox_id": sandbox.id, "runtime": type(sandbox).__name__}
 
     @tool("Bash", response_format="content_and_artifact")
     async def Bash(
@@ -40,7 +34,9 @@ def create_execute_bash_tool(sandbox: SandboxRuntime) -> BaseTool:
             Combined stdout and stderr, or an ERROR message.
         """
         try:
-            logger.debug("Executing bash command", extra={"command": command[:100]})
+            logger.debug(
+                "Executing bash command", extra={**where, "command": command[:100]}
+            )
 
             # 沙箱接口收秒，工具契约给的是毫秒
             timeout_seconds = int(timeout / 1000) if timeout else 120
@@ -57,7 +53,7 @@ def create_execute_bash_tool(sandbox: SandboxRuntime) -> BaseTool:
             error_output = result.stderr or result.stdout or "Command execution failed (no output)"
             logger.warning(
                 "Bash command failed",
-                extra={"command": command[:50], "exit_code": result.exit_code},
+                extra={**where, "command": command[:50], "exit_code": result.exit_code},
             )
             return (
                 f"ERROR: Command failed (exit code {result.exit_code})\n{error_output}",
@@ -65,7 +61,7 @@ def create_execute_bash_tool(sandbox: SandboxRuntime) -> BaseTool:
             )
 
         except Exception as e:
-            logger.exception("Failed to execute bash command")
+            logger.exception("Failed to execute bash command", extra=where)
             return f"ERROR: {e!s}", {}
 
     return Bash
