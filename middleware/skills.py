@@ -130,9 +130,7 @@ class SkillsMiddleware(AgentMiddleware):
                 kept.append(tool)
         filtered = request.override(tools=kept)
 
-        # 少了这段清单，模型不知道 LoadSkill 该传什么。但只列挂了工具的：清单的
-        # 意思是「加载它就解锁这些工具」，不挂工具的解锁不了任何东西。而且列出来
-        # 是有害的——主 agent 看见自己也能加载，就自己动手了，本该派的活派不出去。
+
         lines = []
         for skill in list_skills():
             names = skill.get_tool_names()

@@ -20,6 +20,11 @@ workspace/*
 # 对话落盘：运行数据，不进版本库
 .langgraph/
 
+# 上游原始数据集副本：278 MiB，不参与构建，需要时可从上游重新获取。
+# 注意 source/*.json（content_dataset / content_features / analysis_dataset）
+# 是流水线的唯一真源，要进版本库，别一起忽略了。
+source/metadata.parquet
+
 # IDE
 .idea/
 .vscode/

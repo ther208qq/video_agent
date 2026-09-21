@@ -1,0 +1,51 @@
+{
+  "source_dataset": "source/content_dataset.json",
+  "generated_at": "2026-09-21T04:04:15+00:00",
+  "model": "deepseek-chat",
+  "总数量": 300,
+  "成功数量": 300,
+  "失败数量": 0,
+  "失败 video_id": [],
+  "本次处理数量": 219,
+  "布尔特征分布": {
+    "has_hook": {
+      "true": 223,
+      "false": 77
+    },
+    "has_question": {
+      "true": 184,
+      "false": 116
+    },
+    "has_conflict": {
+      "true": 127,
+      "false": 173
+    },
+    "has_reversal": {
+      "false": 188,
+      "true": 112
+    }
+  },
+  "emotion_score 分布": {
+    "2": 5,
+    "3": 26,
+    "4": 34,
+    "5": 26,
+    "6": 59,
+    "7": 71,
+    "8": 56,
+    "9": 23
+  },
+  "question_count 分布": {
+    "0": 116,
+    "1": 79,
+    "2": 51,
+    "3": 27,
+    "4": 12,
+    "5": 7,
+    "6": 6,
+    "9": 1,
+    "13": 1
+  },
+  "topic 去重数量": 300,
+  "质量检查": "全部通过"
+}

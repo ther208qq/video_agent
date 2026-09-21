@@ -6,6 +6,8 @@
 
 from __future__ import annotations
 
+import asyncio
+import secrets
 from collections.abc import Awaitable, Callable, Sequence
 from dataclasses import dataclass
 from typing import Any
@@ -87,8 +89,9 @@ def create_subagent(
 #: subagent_coordination.md.j2——上游验证过的一套，没必要自己另编。
 _ROSTER_HEADER = """## Subagents
 
-Delegate via the `Task` tool. Each subagent runs with its own isolated context
-and returns only its final report.
+Delegate via the `Task` tool. Each subagent runs with its own isolated context,
+in the background. `Task` hands you back an ID immediately; collect the report
+with `TaskOutput(task_id=...)` before you finish your turn.
 
 """
 
@@ -100,8 +103,19 @@ already have the context for.
 """
 
 
+@dataclass
+class _Task:
+    """一个后台 Task 调用的全部状态。"""
+
+    task_id: str
+    subagent_type: str
+    running: asyncio.Task
+    seen: bool = False
+    """通知过主 agent 没有。没这个标记，同一次收工会被反复播报。"""
+
+
 class SubAgentMiddleware(AgentMiddleware):
-    """给主 agent 挂一个 Task 工具：按类型把活儿甩给子代理，只拿回结论。"""
+    """给主 agent 挂两个工具：Task 按类型把活儿甩给子代理后台跑，TaskOutput 取结果。"""
 
     def __init__(
         self,
@@ -110,15 +124,21 @@ class SubAgentMiddleware(AgentMiddleware):
         tools: Sequence[BaseTool | Callable | dict[str, Any]],
         middleware: list[AgentMiddleware] | None = None,
         subagents: Sequence[SubAgent] = (),
+        timeout: float = 60.0,
     ) -> None:
         super().__init__()
         self.specs = [GENERAL_PURPOSE, *subagents]
+        #: 主 agent 收尾后最多等后台任务多久。
+        self.timeout = timeout
         self.subagent_graphs = {
             spec.name: create_subagent(
                 model=model, spec=spec, tools=tools, middleware=middleware
             )
             for spec in self.specs
         }
+        # task_id -> 在跑的后台任务。字典持的就是强引用（asyncio 自己只持弱引用，
+        # 不留一份任务会被 GC 掉），也是主 agent 取结果时查的那张表
+        self._tasks: dict[str, _Task] = {}
 
         @tool("Task")
         async def task(description: str, prompt: str, subagent_type: str) -> str:
@@ -128,9 +148,10 @@ class SubAgentMiddleware(AgentMiddleware):
             operations. Do NOT use for simple 1-2 tool operations — do those
             yourself.
 
-            The subagent sees nothing of this conversation. It runs to
-            completion and reports back once; its intermediate steps stay
-            hidden. If you need several independent pieces of work done, call
+            The subagent sees nothing of this conversation and its intermediate
+            steps stay hidden. It runs in the background: this returns as soon
+            as the subagent is started, not when it finishes, so you can keep
+            working. If you need several independent pieces of work done, call
             this once per piece in the same message and they run concurrently.
 
             Args:
@@ -142,7 +163,8 @@ class SubAgentMiddleware(AgentMiddleware):
                     listed in the Subagents section of your instructions.
 
             Returns:
-                The subagent's final report.
+                The task's ID, not its work. Collect the result with
+                TaskOutput(task_id=...).
             """
             subagent = self.subagent_graphs.get(subagent_type)
             if subagent is None:
@@ -155,11 +177,107 @@ class SubAgentMiddleware(AgentMiddleware):
             # 只给 messages：子代理要的一切都在 prompt 里，父对话不该漏进去，
             # 否则它的上下文就不再独立
             state = {"messages": [HumanMessage(content=prompt)]}
-            result = await subagent.ainvoke(state)
-            # 尾随空白会让 Anthropic 拒掉这条消息
-            return result["messages"][-1].text.rstrip()
+            task_id = secrets.token_urlsafe(4)[:6]
+            self._tasks[task_id] = _Task(
+                task_id=task_id,
+                subagent_type=subagent_type,
+                running=asyncio.create_task(subagent.ainvoke(state)),
+            )
+            return (
+                f"Task-{task_id} started in the background ({subagent_type}): "
+                f"{description}\n"
+                f"Collect its result with TaskOutput(task_id={task_id!r})."
+            )
 
-        self.tools = [task]
+        @tool("TaskOutput")
+        async def task_output(task_id: str | None = None, timeout: float = 0) -> str:
+            """Collect the result of a background subagent started with Task.
+
+            Args:
+                task_id: The ID Task returned, e.g. "8kQ2mZ". Omit to list
+                    every task started so far.
+                timeout: Seconds to wait for the task to finish. Default 0
+                    returns straight away with whatever is there.
+
+            Returns:
+                The subagent's report once it has finished, otherwise how far
+                along it is.
+            """
+            if task_id is None:
+                if not self._tasks:
+                    return "No background tasks have been started yet."
+                rows = []
+                for tid, task in self._tasks.items():
+                    running = task.running
+                    if not running.done():
+                        rows.append(f"- Task-{tid}: running")
+                    elif running.cancelled():
+                        rows.append(f"- Task-{tid}: cancelled")
+                    elif running.exception() is not None:
+                        rows.append(f"- Task-{tid}: failed")
+                    else:
+                        rows.append(f"- Task-{tid}: finished")
+                return "Background tasks:\n" + "\n".join(rows)
+
+            task = self._tasks.get(task_id)
+            if task is None:
+                known = ", ".join(self._tasks) or "none"
+                return (
+                    f"ERROR: no task {task_id!r}. Known task IDs: {known}"
+                )
+            running = task.running
+
+            if timeout > 0 and not running.done():
+                await asyncio.wait([running], timeout=timeout)
+            if not running.done():
+                return (
+                    f"Task-{task_id} is still running. Call again with a "
+                    f"larger timeout to wait for it."
+                )
+
+            if running.cancelled():
+                return f"Task-{task_id} was cancelled before it produced a result."
+            if (err := running.exception()) is not None:
+                return f"Task-{task_id} failed: {err!r}"
+
+            # 尾随空白会让 Anthropic 拒掉这条消息
+            return running.result()["messages"][-1].text.rstrip()
+
+        self.tools = [task, task_output]
+
+    def has_pending_tasks(self) -> bool:
+        return any(not task.running.done() for task in self._tasks.values())
+
+    async def wait_for_all(self) -> None:
+        """等后台任务都收工，最多等 timeout 秒。等不到不算错，主 agent 照常收尾。"""
+        pending = [t.running for t in self._tasks.values() if not t.running.done()]
+        if pending:
+            await asyncio.wait(pending, timeout=self.timeout)
+
+    def check_notification(self) -> str | None:
+        """已经收工、还没跟主 agent 说过的任务，凑成一条通知。
+
+        通知只报「去 TaskOutput 取」，不夹带结果正文——结果只有一个出口，
+        在通知里再抄一份，两份迟早对不上。
+        """
+        unseen = [t for t in self._tasks.values() if t.running.done() and not t.seen]
+        if not unseen:
+            return None
+        for task in unseen:
+            task.seen = True
+
+        named = ", ".join(
+            f"**Task-{t.task_id}** ({t.subagent_type})" for t in unseen
+        )
+        if len(unseen) == 1:
+            return (
+                f"Your background subagent task has finished: {named}.\n\n"
+                f'Call `TaskOutput(task_id="{unseen[0].task_id}")` to see the result.'
+            )
+        return (
+            f"Your background subagent tasks have finished: {named}.\n\n"
+            f"Call `TaskOutput()` to see every result."
+        )
 
     async def awrap_model_call(
         self,
@@ -174,3 +292,41 @@ class SubAgentMiddleware(AgentMiddleware):
             system_message=append_to_system_message(request.system_message, manifest)
         )
         return await handler(filtered)
+
+
+class SubAgentOrchestrator:
+    """把 agent 包一层：主 agent 收尾后，替它把后台任务的结果接回来。
+
+    主 agent 收尾时后台任务常常还在跑，它的结论就没人接。这里在 graph 外面守一轮：
+    等任务收工，把一条通知写回对话，再把主 agent 叫起来续跑一次——它看到通知会
+    自己去调 TaskOutput。只守一轮，取不到就放行，不在这里空转。
+    """
+
+    def __init__(self, agent: Any, middleware: SubAgentMiddleware) -> None:
+        self.agent = agent
+        self.middleware = middleware
+
+    async def ainvoke(
+        self, input_state: Any, config: dict[str, Any] | None = None
+    ) -> Any:
+        config = config or {}
+        result = await self.agent.ainvoke(input_state, config)
+
+
+        note = self.middleware.check_notification()
+        if note is None and self.middleware.has_pending_tasks():
+            await self.middleware.wait_for_all()
+            note = self.middleware.check_notification()
+        if note is None:
+            return result
+
+        message = HumanMessage(content=note, name="orchestrator")
+        # 将消息通知追加到主agent的state中
+        if getattr(self.agent, "checkpointer", None) is None:
+            state: Any = {"messages": [*result["messages"], message]}
+        else:
+            await self.agent.aupdate_state(
+                config, {"messages": [message]}, as_node="__start__"
+            )
+            state = None
+        return await self.agent.ainvoke(state, config)

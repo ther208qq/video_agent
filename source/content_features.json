@@ -1,0 +1,3008 @@
+{
+  "source_dataset": "source/content_dataset.json",
+  "count": 300,
+  "generated_at": "2026-09-21T04:04:15+00:00",
+  "model": "deepseek-chat",
+  "features": [
+    {
+      "video_id": "7030916885554285829",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "该不该养狗，猫强烈反对"
+    },
+    {
+      "video_id": "7212462725341973802",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "自嘲式承认对某人着迷"
+    },
+    {
+      "video_id": "7508213439697931566",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "称赞玛蒂尔达的老师蜜糖小姐"
+    },
+    {
+      "video_id": "7564983049570569486",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "吐槽皇室战争超级骑士过强"
+    },
+    {
+      "video_id": "7383625295514963242",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "被喷香水后遭对方吐槽体味"
+    },
+    {
+      "video_id": "7527141968510586168",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "意大利蓝洞旅行与Jet2度假优惠"
+    },
+    {
+      "video_id": "7295962735911734571",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 1,
+      "topic": "不确定某事是否完成的自言自语"
+    },
+    {
+      "video_id": "7488326891221290283",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "美国恶霸犬幼犬可爱日常"
+    },
+    {
+      "video_id": "7466985033207647534",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "Kai在格莱美颁奖礼上的搞笑片段"
+    },
+    {
+      "video_id": "7008677581595708677",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 1,
+      "topic": "18岁老猫与主人的温情互动"
+    },
+    {
+      "video_id": "7433174960111242527",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "NFL球员Saquon的惊人表现"
+    },
+    {
+      "video_id": "7371256796599651590",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "展示火鸡叫声"
+    },
+    {
+      "video_id": "7454321159803358507",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "堡垒之夜玩家自称主角的搞笑片段"
+    },
+    {
+      "video_id": "7006894181780049157",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "简短对话片段，提醒先锁好某物"
+    },
+    {
+      "video_id": "7097418450980703530",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 2,
+      "topic": "女儿已过母乳喂养年龄的POV"
+    },
+    {
+      "video_id": "7525305252870884638",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "搞笑短视频片段"
+    },
+    {
+      "video_id": "7526610247868353823",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 1,
+      "topic": "吐槽高中里有人乱说话"
+    },
+    {
+      "video_id": "7009068572966161669",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "跟风拍短视频挑战，结尾有惊险反转"
+    },
+    {
+      "video_id": "7295918013356821803",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "豚鼠吃东西速度极快"
+    },
+    {
+      "video_id": "7457945313270140182",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 0,
+      "topic": "配合BANG BANG BANG音乐的热门短视频"
+    },
+    {
+      "video_id": "7008328365392284934",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "用\"我有你没有\"句式比拼蜂蜜和糖"
+    },
+    {
+      "video_id": "7445414177478364446",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "被叫错名字的球员纠正称呼"
+    },
+    {
+      "video_id": "7018219902683090182",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "狗狗极限跑酷表演"
+    },
+    {
+      "video_id": "7225333121619709227",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "不要两次爱上同一个人"
+    },
+    {
+      "video_id": "7355714056612777259",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 0,
+      "topic": "车祸后仍继续打拳的搞笑片段"
+    },
+    {
+      "video_id": "7510236860132642090",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 9,
+      "question_count": 0,
+      "topic": "情绪激动的呼喊式短视频片段"
+    },
+    {
+      "video_id": "7458965911047916818",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "姐姐警告别人别打弟弟主意"
+    },
+    {
+      "video_id": "7365198959570177322",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "对狗狗的温柔夸赞表白"
+    },
+    {
+      "video_id": "7350873993768897822",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "情侣因看手机引发的整蛊争执"
+    },
+    {
+      "video_id": "7528544474826378551",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "狗背对你坐着代表信任与守护"
+    },
+    {
+      "video_id": "7203352434654203182",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 2,
+      "question_count": 0,
+      "topic": "情人节穿搭盲约花絮片段"
+    },
+    {
+      "video_id": "7484085475192556846",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "大声呼喊寻找Uncle Bob"
+    },
+    {
+      "video_id": "7259923546330172714",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "第二次尝试仍得到相同结果，质疑TikTok"
+    },
+    {
+      "video_id": "7472509171380866335",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 5,
+      "topic": "法官Judy追问ATV去向的庭审片段"
+    },
+    {
+      "video_id": "7590193596213562655",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "自称将成为知名网红"
+    },
+    {
+      "video_id": "7014169615890763013",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "吐槽Costco发出的怪异声响"
+    },
+    {
+      "video_id": "7501758495381785862",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 5,
+      "question_count": 0,
+      "topic": "朋友间关于拿土豆的搞笑误会"
+    },
+    {
+      "video_id": "7439488101770071338",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "歌词片段：若他是赢家你无需担忧"
+    },
+    {
+      "video_id": "7586160567312796935",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 9,
+      "question_count": 1,
+      "topic": "激烈争吵后突然认输又反悔"
+    },
+    {
+      "video_id": "7081005630617734446",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "合拍视频中展示忍者玩偶"
+    },
+    {
+      "video_id": "7410572197632167201",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 3,
+      "topic": "孩子询问妈妈画蒙娜丽莎的经历"
+    },
+    {
+      "video_id": "7555207004625718536",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 2,
+      "question_count": 0,
+      "topic": "宠物搞笑视频配旅行广告字幕"
+    },
+    {
+      "video_id": "7484075730477911327",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "展示喜欢的音效"
+    },
+    {
+      "video_id": "7403362209864092970",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "在7-11工作50年只收到一封邮件"
+    },
+    {
+      "video_id": "7046217588057197870",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "颜值变化：小时候可爱，中学变丑又变好看"
+    },
+    {
+      "video_id": "7516610815508663566",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 0,
+      "topic": "删掉视频重发以提升播放量"
+    },
+    {
+      "video_id": "7428609396046826795",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 0,
+      "topic": "万圣节库斯科cosplay造型展示"
+    },
+    {
+      "video_id": "7056512097748045102",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "调侃某位女性人物的搞笑片段"
+    },
+    {
+      "video_id": "7152684891400965418",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 5,
+      "question_count": 0,
+      "topic": "皇室战争游戏对局实况片段"
+    },
+    {
+      "video_id": "7532953221317283078",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 9,
+      "question_count": 3,
+      "topic": "怒怼\"给上帝两秒钟\"的劝诫"
+    },
+    {
+      "video_id": "7465568027195608328",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "用\"别来我的小镇\"玩圣诞歌梗"
+    },
+    {
+      "video_id": "7593580796758347039",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 5,
+      "question_count": 1,
+      "topic": "只有一个远方朋友但情谊特别"
+    },
+    {
+      "video_id": "7582353104666938638",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 5,
+      "topic": "买咖啡被拒后与店员争执"
+    },
+    {
+      "video_id": "7505260467594595626",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 3,
+      "topic": "TikTok合集结束后的互动提问"
+    },
+    {
+      "video_id": "7450307828558122286",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 9,
+      "question_count": 0,
+      "topic": "猫咪配脏话音频的搞笑视频"
+    },
+    {
+      "video_id": "7079607094982249771",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "吐槽妹妹嫌自己烦的搞笑短片"
+    },
+    {
+      "video_id": "7366255616903646510",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "发现自己的照片被发到Instagram"
+    },
+    {
+      "video_id": "7382002450359651616",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "外貌与学识的对比调侃"
+    },
+    {
+      "video_id": "7299857329296641322",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "用撩人话术搭讪的搞笑片段"
+    },
+    {
+      "video_id": "7402138841613798702",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 0,
+      "topic": "电梯受困惊慌呼救"
+    },
+    {
+      "video_id": "6989759096652090629",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "小孩咳嗽模仿与\"那是真的\"争论"
+    },
+    {
+      "video_id": "7151466184410680622",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "调侃湖人缺中锋，AD不愿打五号位"
+    },
+    {
+      "video_id": "7405776495286816031",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "口红试色翻车与心碎吐槽"
+    },
+    {
+      "video_id": "7390812934663965982",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "篮球三分绝杀瞬间"
+    },
+    {
+      "video_id": "7550745702880660750",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 2,
+      "topic": "宠物互怼式\"你妈\"玩笑"
+    },
+    {
+      "video_id": "7459652336751824145",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 9,
+      "question_count": 0,
+      "topic": "卡地亚 Trinity 首饰展示"
+    },
+    {
+      "video_id": "7547399300112796950",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 5,
+      "question_count": 1,
+      "topic": "蜘蛛侠配黑色幽默数字梗"
+    },
+    {
+      "video_id": "7094622907996835078",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "自制迷你录像带店模型"
+    },
+    {
+      "video_id": "7540299822440402189",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "巴哥犬与水相关的搞笑片段"
+    },
+    {
+      "video_id": "7294128686977092870",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 1,
+      "topic": "辨认玩具熊弗莱迪·法兹熊"
+    },
+    {
+      "video_id": "7024920724418596142",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "万圣节要糖被区别对待"
+    },
+    {
+      "video_id": "7129720680848854314",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 1,
+      "topic": "吐槽某段子不好笑，因涉及孤儿"
+    },
+    {
+      "video_id": "7191080132554083586",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "综艺现场嘉宾互动搞笑片段"
+    },
+    {
+      "video_id": "7449401312090901782",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 2,
+      "question_count": 0,
+      "topic": "校园日常打招呼片段"
+    },
+    {
+      "video_id": "7422508430453116191",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 1,
+      "topic": "校园crush主题的AI特效短视频"
+    },
+    {
+      "video_id": "7562174004723846422",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "妻子怀疑丈夫不忠的内心独白"
+    },
+    {
+      "video_id": "7497575343922924806",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "纠正\"非洲是一个国家\"的错误认知"
+    },
+    {
+      "video_id": "7068716107644833066",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "调侃草莓奶是素食的搞笑段子"
+    },
+    {
+      "video_id": "7463019020711709974",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 2,
+      "question_count": 0,
+      "topic": "无实质内容，仅标注无聊标签"
+    },
+    {
+      "video_id": "7467006643398577439",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 9,
+      "question_count": 0,
+      "topic": "呼吁保护女性、敌视男性的极端口号"
+    },
+    {
+      "video_id": "7049911822899629359",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "体重秤带来的意外惊喜"
+    },
+    {
+      "video_id": "7041092152742530310",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 9,
+      "question_count": 1,
+      "topic": "动画短片：怒骂对方别再联系"
+    },
+    {
+      "video_id": "7456235710517939487",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 9,
+      "question_count": 2,
+      "topic": "两人激烈对骂的冲突片段"
+    },
+    {
+      "video_id": "7289150162482613547",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 1,
+      "topic": "模仿网络热梗的搞笑短视频"
+    },
+    {
+      "video_id": "7412111183345437994",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "炫富对峙：现金对豪车"
+    },
+    {
+      "video_id": "7218581954533395755",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "调侃美国连锁餐厅全是Applebee's"
+    },
+    {
+      "video_id": "7022363989984169221",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "观看背部正骨发出咔咔声"
+    },
+    {
+      "video_id": "7354585955677900074",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "滑雪巡逻员误会我穿滑雪鞋上缆车"
+    },
+    {
+      "video_id": "7458410284143709470",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "真实友谊的信任与羁绊"
+    },
+    {
+      "video_id": "7234619769704516891",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "否认自己是pick me girl的搞笑自辩"
+    },
+    {
+      "video_id": "7465589533191458078",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "脱发11个月后的生发进展记录"
+    },
+    {
+      "video_id": "7496538944356617494",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "展示圣诞老人餐盘和黑色圣诞老人餐巾"
+    },
+    {
+      "video_id": "7339361286595333422",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 2,
+      "topic": "努力付出后的自我质疑"
+    },
+    {
+      "video_id": "7135640608525274411",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "加州7-11信用卡盗刷器被抓现行"
+    },
+    {
+      "video_id": "7408578772590431534",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 1,
+      "topic": "每日冷笑话：理发师赢得比赛"
+    },
+    {
+      "video_id": "7595230297461968160",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 3,
+      "topic": "相恋五年后发现两人是亲姐妹"
+    },
+    {
+      "video_id": "7412605657993448737",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 0,
+      "topic": "小孩模仿护肤化妆的GRWM日常"
+    },
+    {
+      "video_id": "7009304356545645830",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 0,
+      "topic": "没冰块了，蜘蛛出现引发惊慌"
+    },
+    {
+      "video_id": "7155296881868934443",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 3,
+      "topic": "约会时听不懂对方在说什么"
+    },
+    {
+      "video_id": "7365246957352209707",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "展示Stanley杯子收藏"
+    },
+    {
+      "video_id": "7117942373262429466",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 0,
+      "topic": "配合节奏练习快速变装"
+    },
+    {
+      "video_id": "7142121449870937387",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "教师穿搭展示与讨论"
+    },
+    {
+      "video_id": "7109509013053803822",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "多汁芒果的ASMR吃播展示"
+    },
+    {
+      "video_id": "7169230832442281221",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 2,
+      "topic": "修复失败的史莱姆并征求下一步建议"
+    },
+    {
+      "video_id": "7016176136145095938",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 1,
+      "topic": "搞笑短片：问对方是否还好"
+    },
+    {
+      "video_id": "7447551797155220766",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 9,
+      "question_count": 2,
+      "topic": "家长暴怒打电话追问孩子下落"
+    },
+    {
+      "video_id": "7324431802469289262",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 2,
+      "topic": "比赛中选手突然弃权引发冲突"
+    },
+    {
+      "video_id": "7325192838461836586",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 2,
+      "topic": "唇读模仿安妮海瑟薇的安抚对话"
+    },
+    {
+      "video_id": "7480559524185787670",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "粉丝力挺Young Thug并展示纹身"
+    },
+    {
+      "video_id": "7281295027274370337",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "GTA6何时发布，劝玩家耐心等待"
+    },
+    {
+      "video_id": "7171549639521553710",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "出门前快速打理狼尾短发"
+    },
+    {
+      "video_id": "7066966814886006062",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 2,
+      "topic": "情侣视频中语无伦次的搞笑片段"
+    },
+    {
+      "video_id": "7085844260368518442",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "合拍视频中两人互相挑衅叫嚣"
+    },
+    {
+      "video_id": "7195348145142893830",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 5,
+      "question_count": 0,
+      "topic": "并非所有照片都能当专辑封面"
+    },
+    {
+      "video_id": "6971852192214945029",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 1,
+      "topic": "警犬搭档日常片段"
+    },
+    {
+      "video_id": "7230052182329052462",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 3,
+      "topic": "倔强哈士奇被闪电逼回屋"
+    },
+    {
+      "video_id": "6983709193869987077",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 1,
+      "topic": "黑寡妇形象逐渐去性化"
+    },
+    {
+      "video_id": "7497247691030744375",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 5,
+      "question_count": 1,
+      "topic": "影视角色剪辑，感叹角色今昔变化"
+    },
+    {
+      "video_id": "7538702340837117214",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 9,
+      "question_count": 2,
+      "topic": "假装逃学结果被带去迪士尼"
+    },
+    {
+      "video_id": "7539568543889739038",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 1,
+      "topic": "Jet2 假期促销广告"
+    },
+    {
+      "video_id": "7583419526885199126",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 2,
+      "topic": "Millie Bobby Brown 剪辑配文"
+    },
+    {
+      "video_id": "6976299485957770502",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "跟着歌曲跳舞的短视频"
+    },
+    {
+      "video_id": "7536318958505446678",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "给脖子疼的牛做脊椎调理"
+    },
+    {
+      "video_id": "7220107677370731778",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 9,
+      "question_count": 0,
+      "topic": "被袋鼠纠缠，惊慌呼救"
+    },
+    {
+      "video_id": "7207499035396017451",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 9,
+      "question_count": 1,
+      "topic": "主人回家发现猫捣乱崩溃大喊"
+    },
+    {
+      "video_id": "7523160685757451538",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 3,
+      "topic": "疑似拍到巨人，惊呼要叫团队"
+    },
+    {
+      "video_id": "7493775057215327530",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "影院员工开场前提醒观众守规矩"
+    },
+    {
+      "video_id": "7435566115910208769",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "吃辣芒果零食的体验吐槽"
+    },
+    {
+      "video_id": "7538121184202722591",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 3,
+      "topic": "海豹动画讲述加料吃冰淇淋"
+    },
+    {
+      "video_id": "7083979243503308075",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 9,
+      "question_count": 0,
+      "topic": "因对方咳嗽而爆粗口对骂"
+    },
+    {
+      "video_id": "6977434202744671493",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "用歌词式台词回怼对方不满"
+    },
+    {
+      "video_id": "7389621197358648606",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 0,
+      "topic": "不要为自己感到羞耻，直面并改变"
+    },
+    {
+      "video_id": "7420154473550630190",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 3,
+      "topic": "吉米·巴特勒媒体日新造型猜测"
+    },
+    {
+      "video_id": "7307402274953792811",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "为什么巨石强森能掰直女同"
+    },
+    {
+      "video_id": "7041797791026384175",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "库里三分球精彩集锦"
+    },
+    {
+      "video_id": "7249741392795258154",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "emo 情绪化的夸张自嘲短剧"
+    },
+    {
+      "video_id": "7194307946740747562",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 0,
+      "topic": "展示家里的小猫有多小只"
+    },
+    {
+      "video_id": "7045046078093184302",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "真实故事改编的感恩表白片段"
+    },
+    {
+      "video_id": "7471144287481154859",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "啦啦队为Taco Bell助威口号表演"
+    },
+    {
+      "video_id": "7024759895702392069",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "猜颜色游戏被整蛊"
+    },
+    {
+      "video_id": "7190433225771142443",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "恶搞PETA素食宣传，反手点全家桶"
+    },
+    {
+      "video_id": "7019864102646385926",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "吐槽警察逮捕尸体并要求其起身"
+    },
+    {
+      "video_id": "7441257386486009131",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "免下车点单发音尴尬翻车"
+    },
+    {
+      "video_id": "7464033799400295726",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "纽曼家族与Mellow球技争议"
+    },
+    {
+      "video_id": "7104306553385127214",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 1,
+      "topic": "混进NBA季后赛新闻发布会现场"
+    },
+    {
+      "video_id": "7132230100208110890",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "奥尼尔为13岁大脚少年买10双鞋"
+    },
+    {
+      "video_id": "7517022154358000927",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "感情中渴望被珍惜与重视"
+    },
+    {
+      "video_id": "7236853591280061738",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "棒球选手剪辑视频（vsp edit）"
+    },
+    {
+      "video_id": "7213906231746989330",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "恶作剧骗人说Scooby Doo是脏话"
+    },
+    {
+      "video_id": "7429123618770013471",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 1,
+      "topic": "詹姆斯与儿子布朗尼的篮球时刻"
+    },
+    {
+      "video_id": "7234683261392424238",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 4,
+      "question_count": 1,
+      "topic": "求助寻找某款口红及平价替代"
+    },
+    {
+      "video_id": "7547950813616917791",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "让男友展示我做的面包引发的小摩擦"
+    },
+    {
+      "video_id": "7478547055913340203",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "推荐Longchamp夏季新款包包"
+    },
+    {
+      "video_id": "7024646990919224581",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 4,
+      "topic": "冰淇淋三明治引发的对话冲突"
+    },
+    {
+      "video_id": "7116570377375075589",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 0,
+      "topic": "库里与沃尔的对决"
+    },
+    {
+      "video_id": "7441394859740597559",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "拉梅洛·鲍尔后撤步三分精彩进球"
+    },
+    {
+      "video_id": "7459821272055303466",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "每日经文：诗篇91:14的应许"
+    },
+    {
+      "video_id": "7482569290776841503",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 0,
+      "topic": "父亲临终前对儿子的深情告别"
+    },
+    {
+      "video_id": "7489690130735844614",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "看猫的搞笑短视频片段"
+    },
+    {
+      "video_id": "7059505070345522478",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 9,
+      "question_count": 2,
+      "topic": "说唱歌词中的愤怒与对抗"
+    },
+    {
+      "video_id": "7522539268892396830",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 4,
+      "topic": "朋友间搞笑对话与打闹"
+    },
+    {
+      "video_id": "7583596230828150036",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 2,
+      "topic": "麦地那先知清真寺内外景介绍"
+    },
+    {
+      "video_id": "7041642932746898734",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "给妹妹P图并征求发布许可"
+    },
+    {
+      "video_id": "7375910815523720453",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "公主专属飞行德比被拒参赛"
+    },
+    {
+      "video_id": "7519503163049741576",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 9,
+      "question_count": 0,
+      "topic": "母女互相指责的激烈争吵"
+    },
+    {
+      "video_id": "7155582736688745770",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 0,
+      "topic": "恐怖片《断魂小丑2》极度血腥劝退"
+    },
+    {
+      "video_id": "7125889445961780486",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "挑战：翻转手势看谁能做到"
+    },
+    {
+      "video_id": "7349757128950795562",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "猜真实NBA球员的招牌动作挑战"
+    },
+    {
+      "video_id": "7406310626844331297",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "咒术回战领域展开阴阳设定"
+    },
+    {
+      "video_id": "7561257756099890446",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "恶灵骑士剪辑配Linkin Park音乐"
+    },
+    {
+      "video_id": "7469092857597447466",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "卫衣品牌推广与双胞胎出镜"
+    },
+    {
+      "video_id": "7558964018317200662",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "曾经相爱的人变成陌生人"
+    },
+    {
+      "video_id": "7263420247716220165",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 6,
+      "topic": "汤姆克鲁斯回应自己多项技能"
+    },
+    {
+      "video_id": "7035801266672389382",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "女子堵车道被反堵并叫拖车"
+    },
+    {
+      "video_id": "7106355913153400110",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "与小狗互动的搞笑日常片段"
+    },
+    {
+      "video_id": "7563771948627512589",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 5,
+      "question_count": 0,
+      "topic": "尝试发掘隐藏才艺却失败"
+    },
+    {
+      "video_id": "7069888159001152811",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "纹身配文讲述枪击事件时间线"
+    },
+    {
+      "video_id": "7527991115702750472",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 2,
+      "topic": "听到超响呕吐声后的反应"
+    },
+    {
+      "video_id": "7367879879481756971",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "个人护理好物分享"
+    },
+    {
+      "video_id": "7484384390613617950",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 2,
+      "topic": "二手店淘到超值高尔夫球杆"
+    },
+    {
+      "video_id": "7397166402626456874",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 1,
+      "topic": "女DJ化妆的谐音冷笑话"
+    },
+    {
+      "video_id": "7334623044536634667",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "古兰经忠诚章经文诵读"
+    },
+    {
+      "video_id": "7559061981018295583",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 9,
+      "question_count": 1,
+      "topic": "游戏剪辑配恐怖独白台词"
+    },
+    {
+      "video_id": "7423969278086450475",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 3,
+      "topic": "小孩天真问答的搞笑片段"
+    },
+    {
+      "video_id": "7148768467821350146",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "奥尼尔讲姚明趣事"
+    },
+    {
+      "video_id": "7536764850073111825",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "妈妈护娃怒斥陌生人"
+    },
+    {
+      "video_id": "7553355119128104223",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 0,
+      "topic": "为登贝莱鸣不平，称其才是金球奖真正赢家"
+    },
+    {
+      "video_id": "7537411088476949790",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 6,
+      "topic": "朋友间闲聊卡丁车游玩经历"
+    },
+    {
+      "video_id": "7533827040735251768",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 2,
+      "question_count": 0,
+      "topic": "地球缩放滤镜教程"
+    },
+    {
+      "video_id": "7223852012037803265",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "蝙蝠侠黑暗骑士三部曲名场面"
+    },
+    {
+      "video_id": "7294073417504918830",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 3,
+      "topic": "两代人互相嘲讽身体素质"
+    },
+    {
+      "video_id": "7373914533242473771",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 2,
+      "topic": "John Wall 跳 Dougie 舞的搞笑片段"
+    },
+    {
+      "video_id": "7237648973123702062",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "自称吞下海豚并感受海豚力量"
+    },
+    {
+      "video_id": "6971097368548658437",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 2,
+      "topic": "模仿《外滩群岛》角色口音"
+    },
+    {
+      "video_id": "7122886281436204330",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "指责浪费水并扯到孤儿口渴"
+    },
+    {
+      "video_id": "6995692181826637062",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "没用手却拍手的搞笑片段"
+    },
+    {
+      "video_id": "7512854404614196502",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 0,
+      "topic": "《Ginny and Georgia》Joe 角色剪辑"
+    },
+    {
+      "video_id": "7111498533466836270",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 3,
+      "topic": "救起泳池里快溺水的松鼠"
+    },
+    {
+      "video_id": "7208519313840442630",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 4,
+      "topic": "顾客无理取闹要求租游艇被怼"
+    },
+    {
+      "video_id": "7486326924713757982",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "求Bad Bunny演唱会门票并跟唱歌曲"
+    },
+    {
+      "video_id": "7485539171537390890",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "幼儿分享饼干的暖心日常"
+    },
+    {
+      "video_id": "7018939137952681222",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 3,
+      "topic": "约会对象在床上失禁的尴尬经历"
+    },
+    {
+      "video_id": "7371913965905038638",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 2,
+      "topic": "用噪音梗演绎种族刻板印象"
+    },
+    {
+      "video_id": "7405254123068656913",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "庆祝成功时预感厄运将至"
+    },
+    {
+      "video_id": "7210266525972876590",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "单亲家长情感纠葛的歌词片段"
+    },
+    {
+      "video_id": "6982995209214840069",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 9,
+      "question_count": 2,
+      "topic": "两人争论波塞冬是否存在，结果被打脸"
+    },
+    {
+      "video_id": "7202836296547585285",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "法国人与意大利人念奢侈品牌名对比"
+    },
+    {
+      "video_id": "7279241173573635359",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 2,
+      "topic": "主人发现哈士奇才是捣乱源头"
+    },
+    {
+      "video_id": "7244596648268107014",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "掰手腕选手的王者态度剪辑"
+    },
+    {
+      "video_id": "7042836382313614598",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "史上最令人不适的产品设计盘点"
+    },
+    {
+      "video_id": "7339137403224968480",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "演唱会现场跟唱互动片段"
+    },
+    {
+      "video_id": "7331499717068836142",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 2,
+      "topic": "在浴室里说脏话的挑战"
+    },
+    {
+      "video_id": "7580459631202372871",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "无意义字幕片段拼接的搞笑短视频"
+    },
+    {
+      "video_id": "7356001798987042079",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "师生蔬菜舞对决"
+    },
+    {
+      "video_id": "6975219713307659526",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 0,
+      "topic": "姐妹美甲展示配说唱字幕"
+    },
+    {
+      "video_id": "7106910888598392110",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 9,
+      "question_count": 1,
+      "topic": "路边救助多只小猫"
+    },
+    {
+      "video_id": "7386303320987667719",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "剧中人物在河边争执的片段"
+    },
+    {
+      "video_id": "7465894017721568542",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 3,
+      "topic": "10岁小孩登台表演Kendrick Lamar说唱"
+    },
+    {
+      "video_id": "6995266879195565317",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 2,
+      "topic": "老师叫学生进办公室后宣布其获荣誉榜"
+    },
+    {
+      "video_id": "7181983714136673582",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 2,
+      "topic": "吐槽英语动词变位（he dances）"
+    },
+    {
+      "video_id": "7198534099420745006",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 3,
+      "topic": "免费帮受伤房主修剪杂草草坪"
+    },
+    {
+      "video_id": "7366736888801004843",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 2,
+      "topic": "夜晚夸赞陌生女孩被误认搭讪"
+    },
+    {
+      "video_id": "7380756114415029536",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 3,
+      "topic": "父亲节贺卡引发的家庭争吵"
+    },
+    {
+      "video_id": "7555242443537468727",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 5,
+      "topic": "问需要多少点赞才能受邀参加subathon"
+    },
+    {
+      "video_id": "7553983528661208375",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "火车与卡车相关的短视频片段"
+    },
+    {
+      "video_id": "7003876023196601605",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 5,
+      "question_count": 0,
+      "topic": "小孩用计把狗骗进笼子独占主人"
+    },
+    {
+      "video_id": "7135928458584247598",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 1,
+      "topic": "妈妈到儿子工作地点探班互动"
+    },
+    {
+      "video_id": "7555860301715950870",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 9,
+      "question_count": 6,
+      "topic": "宙斯之子海格力斯的身份拷问"
+    },
+    {
+      "video_id": "7158879616281759019",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "苯酚换肤前后对比与风险提示"
+    },
+    {
+      "video_id": "7516826326213397815",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 5,
+      "question_count": 4,
+      "topic": "深夜醒来与人生建议的问答"
+    },
+    {
+      "video_id": "7588414947244199182",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "剪辑向短视频，问观众是否要第二部分"
+    },
+    {
+      "video_id": "7447099195741375762",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 0,
+      "topic": "库里受伤后回归并命中关键球"
+    },
+    {
+      "video_id": "7518922506699345183",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 2,
+      "topic": "翻唱多首流行歌曲串烧"
+    },
+    {
+      "video_id": "7495840638630399263",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 1,
+      "topic": "湖人队季后赛阵容闲聊"
+    },
+    {
+      "video_id": "7035774119090146566",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 3,
+      "topic": "科比评选历史最佳首发五人阵容"
+    },
+    {
+      "video_id": "7574250075581451538",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 2,
+      "topic": "分享\"妈宝男\"经历并警告弟弟别变成那样"
+    },
+    {
+      "video_id": "7417497400664706347",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "感谢粉丝并呼吁助力涨播放量"
+    },
+    {
+      "video_id": "7596102076455750967",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 2,
+      "topic": "朋友间吐槽绰号与调侃"
+    },
+    {
+      "video_id": "7438692846485392670",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 2,
+      "topic": "Cynthia Erivo 边吊威亚边真唱"
+    },
+    {
+      "video_id": "7595848671950818573",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 0,
+      "topic": "拉梅洛鲍尔精彩进球集锦"
+    },
+    {
+      "video_id": "7586581793512492310",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 3,
+      "topic": "便利店吃播演绎变老后的自己"
+    },
+    {
+      "video_id": "6988242887720832262",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "新西兰奥运舞蹈让美国球员不知所措"
+    },
+    {
+      "video_id": "7247259455795006762",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "Hasan Minhaj 帮奥巴马改推特简介"
+    },
+    {
+      "video_id": "7444573900995955990",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "人与人互相塑造，留下彼此的痕迹"
+    },
+    {
+      "video_id": "7463690408107855146",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 5,
+      "topic": "LaMelo答非所问致采访中断"
+    },
+    {
+      "video_id": "7054280008382221614",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "纽约最小公寓的居住体验"
+    },
+    {
+      "video_id": "7182678500166438187",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 5,
+      "topic": "快餐店新人被赶下班后客流爆满"
+    },
+    {
+      "video_id": "7395354032010726698",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 0,
+      "topic": "两年不变的臀腿训练日动作分享"
+    },
+    {
+      "video_id": "7005559377306455301",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 2,
+      "topic": "给路人贴名字标签的搞笑对白"
+    },
+    {
+      "video_id": "7449285714031774978",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 2,
+      "topic": "爱神胜过一切欲望与关系"
+    },
+    {
+      "video_id": "7471146503839436074",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 2,
+      "topic": "全明星赛上的自我代表与影响力"
+    },
+    {
+      "video_id": "7585819887701085448",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 2,
+      "topic": "爱德华兹与亚历山大关键球对决"
+    },
+    {
+      "video_id": "7198720030953983274",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 4,
+      "topic": "超级英雄与NBA球员打篮球谁更强"
+    },
+    {
+      "video_id": "7477568574039624967",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 6,
+      "question_count": 3,
+      "topic": "小猪佩奇片段配音恶搞"
+    },
+    {
+      "video_id": "7226150770511596842",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 3,
+      "topic": "偶遇一只亲人的猫并想收养它"
+    },
+    {
+      "video_id": "7134759855046298926",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 3,
+      "topic": "区分\"look\"与\"outfit\"的时尚理念"
+    },
+    {
+      "video_id": "7432009685026295083",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 13,
+      "topic": "街头采访万圣节装扮"
+    },
+    {
+      "video_id": "7438321208174660894",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 9,
+      "question_count": 1,
+      "topic": "NBA球星乔丹的炫酷剪辑"
+    },
+    {
+      "video_id": "7007513121535364357",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 0,
+      "topic": "McKamey Manor鬼屋实为酷刑室"
+    },
+    {
+      "video_id": "7390580066780106030",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "NBA球员相关吐槽与玩梗剪辑"
+    },
+    {
+      "video_id": "7086935011613625643",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 2,
+      "topic": "围观巧克力大师制作树枝造型作品"
+    },
+    {
+      "video_id": "7540019769450237197",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 4,
+      "topic": "TikTok互动技巧：做优质互动者"
+    },
+    {
+      "video_id": "7348620630495104302",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "用TikTok搜索洞察工具找选题上热门"
+    },
+    {
+      "video_id": "7470233704607042838",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 3,
+      "topic": "NBA球星爱德华兹配说唱歌词剪辑"
+    },
+    {
+      "video_id": "7515135275564158230",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 3,
+      "topic": "粉丝看Jin与Jungkook互动片段"
+    },
+    {
+      "video_id": "7291322656740085022",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 1,
+      "topic": "用手语表达\"f around and find out\""
+    },
+    {
+      "video_id": "7186121003444047147",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 5,
+      "topic": "寿司店求婚被吐槽并演成NPC追杀"
+    },
+    {
+      "video_id": "7563308627394661662",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "吐槽翻车鱼并呼吁停止讨厌它"
+    },
+    {
+      "video_id": "7155523207401966890",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "Netflix回应网友自制塞尔达海报"
+    },
+    {
+      "video_id": "7063632738825407750",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 4,
+      "topic": "冷笑话挑战与搞笑问答"
+    },
+    {
+      "video_id": "7419550531225537800",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 2,
+      "topic": "情侣睡前恶作剧的水下搞笑片段"
+    },
+    {
+      "video_id": "6996829686760230149",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 4,
+      "topic": "测试男友是否聪明的盲人提问挑战"
+    },
+    {
+      "video_id": "7177876038511234350",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 6,
+      "topic": "多米尼加蜘蛛侠搞笑短剧"
+    },
+    {
+      "video_id": "7037277828982918406",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 7,
+      "question_count": 3,
+      "topic": "高中恋人坚持13年，回击外界质疑"
+    },
+    {
+      "video_id": "7490258561793035562",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 9,
+      "question_count": 2,
+      "topic": "大学申请录取结果的情绪起伏"
+    },
+    {
+      "video_id": "7537741430937144598",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 3,
+      "topic": "安德鲁·加菲尔德版蜘蛛侠的台词剪辑"
+    },
+    {
+      "video_id": "6988219270043798790",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "饥饿游戏各选区实力对比吹捧第三区"
+    },
+    {
+      "video_id": "7524339231834017026",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "速度与激情街头飙车片段"
+    },
+    {
+      "video_id": "7534596250851626248",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 9,
+      "question_count": 6,
+      "topic": "手机被抢与街头冲突求助"
+    },
+    {
+      "video_id": "7125554536504347950",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "TikTok危险挑战致人死亡"
+    },
+    {
+      "video_id": "7169695331960081707",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 2,
+      "topic": "烤失败的南瓜派与打发的奶油"
+    },
+    {
+      "video_id": "7375061140621085985",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 9,
+      "question_count": 5,
+      "topic": "B超误会：以为怀五胞胎实为一胎"
+    },
+    {
+      "video_id": "7524562613913570566",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 5,
+      "question_count": 4,
+      "topic": "两人为饮料口味斗嘴的片段"
+    },
+    {
+      "video_id": "7563130326864645406",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 4,
+      "topic": "《速度与激情》东京漂移片段剪辑"
+    },
+    {
+      "video_id": "7312129016780164384",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 9,
+      "topic": "混乱争吵中追问录像光盘的下落"
+    },
+    {
+      "video_id": "7356188386585038112",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 2,
+      "topic": "耶稣宣告\"我就是\"的圣经片段剪辑"
+    },
+    {
+      "video_id": "7112202774414134574",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 4,
+      "topic": "两人争论人生意义与珍惜时间"
+    },
+    {
+      "video_id": "7043250825145371950",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 0,
+      "topic": "对他人处理石榴方式的不满吐槽"
+    },
+    {
+      "video_id": "7552506266266897680",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "希腊柠檬鸡蛋汤Avgolemono做法"
+    },
+    {
+      "video_id": "7092045508448931115",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 0,
+      "topic": "翻唱情歌表达一见钟情的爱意"
+    },
+    {
+      "video_id": "7179410788300524846",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 6,
+      "question_count": 1,
+      "topic": "按调酒师操作给绿色鸡尾酒定价"
+    },
+    {
+      "video_id": "6996782670348897541",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 3,
+      "topic": "灵魂伴侣互相控制身体引发混乱"
+    },
+    {
+      "video_id": "7501387902954376470",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 5,
+      "question_count": 6,
+      "topic": "一连串无厘头反问式脑洞提问"
+    },
+    {
+      "video_id": "7434604890925583658",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 0,
+      "topic": "首次赴菲律宾演出，盛赞当地人唱功"
+    },
+    {
+      "video_id": "7562591502896041237",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 1,
+      "topic": "剪辑比赛奖金与天气变化"
+    },
+    {
+      "video_id": "7070251889128131886",
+      "has_hook": false,
+      "has_question": false,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 3,
+      "question_count": 0,
+      "topic": "用Lindor巧克力做浓缩咖啡饮品"
+    },
+    {
+      "video_id": "6964161111436430597",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 7,
+      "question_count": 4,
+      "topic": "妈妈给女儿制定离谱减肥食谱"
+    },
+    {
+      "video_id": "7312792238206012679",
+      "has_hook": false,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": false,
+      "emotion_score": 4,
+      "question_count": 3,
+      "topic": "Ariana 猜歌游戏互动片段"
+    },
+    {
+      "video_id": "7004650782159097094",
+      "has_hook": true,
+      "has_question": false,
+      "has_conflict": true,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 0,
+      "topic": "自闭症者回应被断言无法独立"
+    },
+    {
+      "video_id": "7029817280917687598",
+      "has_hook": true,
+      "has_question": true,
+      "has_conflict": false,
+      "has_reversal": true,
+      "emotion_score": 8,
+      "question_count": 1,
+      "topic": "火烈鸟撞墙摔倒的搞笑解说"
+    }
+  ]
+}

@@ -4,6 +4,7 @@ from .subagent import (
     DEFAULT_SUBAGENT_PROMPT,
     SubAgent,
     SubAgentMiddleware,
+    SubAgentOrchestrator,
     create_subagent,
 )
 
@@ -16,5 +17,6 @@ __all__ = [
     "SkillsMiddleware",
     "SubAgent",
     "SubAgentMiddleware",
+    "SubAgentOrchestrator",
     "create_subagent",
 ]

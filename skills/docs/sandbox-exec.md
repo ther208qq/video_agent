@@ -3,8 +3,12 @@
 The sandbox is a persistent Linux container. Files you write there survive
 between tool calls in a session, but not across sessions.
 
-Two tools, split by how long the code lives:
+Three tools:
 
+- **Write** — put a file into the sandbox: a script to run, a config, data you
+  assembled. Overwrites, and there is no append mode — changing one line means
+  reading the file and writing the whole thing back, so prefer this for files
+  you are creating from scratch.
 - **Bash** — anything you will run more than once, plus the shell itself:
   installing packages, moving files, running a script you wrote to disk,
   chaining commands with pipes.

@@ -9,12 +9,16 @@ from middleware import (
     SkillsMiddleware,
     SubAgent,
     SubAgentMiddleware,
+    SubAgentOrchestrator,
 )
 from sandbox import SandboxRuntime
 from tools import get_tools
 from tools.bash import create_execute_bash_tool
 from tools.code_execution import create_execute_code_tool
-from tools.file_ops import create_read_tool
+from tools.content import create_analyze_content_tool
+from tools.file_ops import create_read_tool, create_write_tool
+from tools.statistics import correlation_analysis, group_comparison
+from tools.summary import summarize_correlation_tool, summarize_group_comparison_tool
 
 DATA_ANALYSIS = SubAgent(
     name="data-analysis",
@@ -42,7 +46,17 @@ def create_video_agent(
     subagents: Sequence[SubAgent] = (),
 ):
 
-    resolved = get_tools() if tools is None else tools
+    # analyze_content 要拿 model 现造，统计和摘要工具是现成的。都得注册进来图才执行
+    # 得了，但分别归 short-video-analysis / statistical-analysis 技能管，
+    # 技能加载前模型看不到它们（见 SkillsMiddleware）
+    resolved = [
+        *(get_tools() if tools is None else tools),
+        create_analyze_content_tool(model),
+        group_comparison,
+        correlation_analysis,
+        summarize_group_comparison_tool,
+        summarize_correlation_tool,
+    ]
     resolved_middleware = (
         list(middleware) if middleware is not None else [SkillsMiddleware()]
     )
@@ -50,25 +64,24 @@ def create_video_agent(
         resolved = [
             *resolved,
             create_read_tool(sandbox),
+            create_write_tool(sandbox),
             create_execute_bash_tool(sandbox),
             create_execute_code_tool(sandbox),
         ]
 
         resolved_middleware.insert(0, LargeResultEvictionMiddleware(sandbox))
 
-        subagent_middleware = [LargeResultEvictionMiddleware(sandbox)]
+        subagent_stack = [LargeResultEvictionMiddleware(sandbox)]
     else:
-        subagent_middleware = None
+        subagent_stack = None
 
-
-    resolved_middleware.append(
-        SubAgentMiddleware(
-            model=model,
-            tools=resolved,
-            middleware=subagent_middleware,
-            subagents=subagents,
-        )
+    subagent_middleware = SubAgentMiddleware(
+        model=model,
+        tools=resolved,
+        middleware=subagent_stack,
+        subagents=subagents,
     )
+    resolved_middleware.append(subagent_middleware)
 
     resolved_middleware.append(
         SummarizationMiddleware(
@@ -78,7 +91,7 @@ def create_video_agent(
         )
     )
 
-    return create_agent(
+    agent = create_agent(
         model,
         system_prompt=system_prompt,
         tools=resolved,
@@ -86,6 +99,10 @@ def create_video_agent(
         checkpointer=checkpointer,
         store=store,
     ).with_config({"recursion_limit": 2000})
+
+    # 包一层：主 agent 收尾后把后台子代理的结果接回来。返回的不是裸 graph，
+    # 拿它当 graph 用（.ainvoke/.astream）没问题，但绕开它就绕开了这一步
+    return SubAgentOrchestrator(agent, subagent_middleware)
 
 
 async def main() -> None:

@@ -1,4 +1,4 @@
-"""从沙箱读文件。
+"""从沙箱读写文件。
 
 工具输出超阈值会被驱逐成文件，模型得有个读回来的口子——否则拿着路径没工具可用。
 """
@@ -69,3 +69,37 @@ def create_read_tool(sandbox: SandboxRuntime) -> BaseTool:
             return f"ERROR: {e!s}"
 
     return Read
+
+
+def create_write_tool(sandbox: SandboxRuntime) -> BaseTool:
+    """创建绑定到 ``sandbox`` 的 Write 工具。"""
+
+    where = {"sandbox_id": sandbox.id, "runtime": type(sandbox).__name__}
+
+    @tool("Write")
+    async def Write(file_path: str, content: str) -> str:
+        """Write a file to the sandbox. Overwrites an existing file.
+
+        Args:
+            file_path: Path to the file, relative to the working directory or
+                absolute. Missing parent directories are created.
+            content: The complete file contents. There is no append mode — to add
+                to an existing file, Read it and write back the full text.
+
+        Returns:
+            How many bytes landed where, or an ERROR message.
+        """
+        try:
+            logger.debug("Writing file", extra={**where, "path": file_path})
+
+            data = content.encode("utf-8")
+            await sandbox.upload_file(data, file_path)
+            # 回给模型的是展开后的路径：它后面拿这个路径去 Bash 里跑，写相对路径
+            # 时得知道实际落在哪
+            return f"Wrote {len(data)} bytes to {sandbox.resolve_path(file_path)}"
+
+        except Exception as e:
+            logger.exception("Failed to write file", extra={**where, "path": file_path})
+            return f"ERROR: {e!s}"
+
+    return Write

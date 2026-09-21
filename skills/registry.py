@@ -26,12 +26,36 @@ class SkillDefinition:
         return (DOCS_DIR / self.doc).read_text(encoding="utf-8")
 
 
+
 SKILL_REGISTRY: dict[str, SkillDefinition] = {
     "sandbox-exec": SkillDefinition(
         name="sandbox-exec",
-        description="在沙箱里执行 bash 命令和 Python 代码。",
-        tool_names=("Bash", "ExecuteCode"),
+        description="在沙箱里写文件、执行 bash 命令和 Python 代码。",
+        tool_names=("Bash", "ExecuteCode", "Write"),
         doc="sandbox-exec.md",
+    ),
+    # analyze_content 要拿 model 现造，注册表里只能声明名字（同沙箱工具）
+    "short-video-analysis": SkillDefinition(
+        name="short-video-analysis",
+        description="分析单条短视频的内容特征：hook、提问、冲突、反转、情绪强度、主题。",
+        tool_names=("analyze_content",),
+        doc="short-video-analysis.md",
+    ),
+    # 两类分析：二元特征分组比较，数值变量之间做相关。选哪个由 agent 看正文决定。
+    # 两个 summarize_* 只吃算完的结果，跟统计工具同属一个技能
+    "statistical-analysis": SkillDefinition(
+        name="statistical-analysis",
+        description=(
+            "对内容特征和互动指标做统计分析，支持两类：二元特征分组比较（Welch t 检验）"
+            "和数值变量相关（Pearson），并把结果转成结构化摘要。"
+        ),
+        tool_names=(
+            "group_comparison",
+            "correlation_analysis",
+            "summarize_group_comparison",
+            "summarize_correlation",
+        ),
+        doc="statistical-analysis.md",
     ),
     # 不挂工具，纯粹是一套做法。给子代理预装用（见 SubAgent.skills），
     # 主 agent 也能加载，但不会因此多出任何工具。
